@@ -48,6 +48,61 @@
             background-color: black;
             color: white;
             border: 2px solid white;
-            padd
+            padding: 12px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #333;
+            border-color: #ccc;
+        }
+
+        .button:active {
+            background-color: #111;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>r<span class="red-three">3</span>list</h1>
+
+    <div id="bio" onclick="changeBio()">Click to see my bio</div>
+
+    <p id="bioText">This is where the bio will appear after clicking above.</p>
+
+    <p>I'm here!</p>
+
+    <button class="button" onclick="window.location.href='about:blank';">about:blank</button>
+    <button class="button" onclick="alert('Mystery button clicked!')">???</button>
+
+    <script>
+        // Array of 10 different bio texts
+        const bioTexts = [
+            "I love coding and web development.",
+            "Currently learning JavaScript and React.",
+            "I enjoy solving puzzles and problem-solving.",
+            "A coffee lover who codes at night.",
+            "Exploring new technologies and frameworks.",
+            "Always curious about how things work.",
+            "Part-time gamer, full-time coder.",
+            "Believer in continuous learning and growth.",
+            "Enjoys both creative and technical challenges.",
+            "A digital wanderer and tech enthusiast."
+        ];
+
+        // Function to change bio text to a random entry
+        function changeBio() {
+            const randomIndex = Math.floor(Math.random() * bioTexts.length);
+            document.getElementById("bioText").innerText = bioTexts[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
 
             
