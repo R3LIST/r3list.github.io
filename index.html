@@ -108,36 +108,4 @@
         // Function to change bio text to a random entry
         function changeBio() {
             const randomIndex = Math.floor(Math.random() * bioTexts.length);
-            document.getElementById("bioText").innerText = bioTexts[randomIndex];
-        }
-
-        // Function to handle the search and open the website using a proxy
-        function handleSearch(event) {
-            if (event.key === 'Enter') {
-                const query = document.getElementById("search").value;
-                const proxyUrl = "https://cors-anywhere.herokuapp.com/";  // Using a free proxy service
-                const targetUrl = query.startsWith('http') ? query : 'http://' + query;
-
-                // Fetch request with required headers to bypass CORS restriction
-                fetch(proxyUrl + targetUrl, {
-                    method: 'GET',
-                    headers: {
-                        'X-Requested-With': 'XMLHttpRequest',
-                        'Origin': 'https://yourdomain.com'  // This should be your site's URL
-                    }
-                })
-                .then(response => response.text())
-                .then(data => {
-                    // Redirect to the target page using the proxy
-                    window.location.href = proxyUrl + targetUrl;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('An error occurred while trying to access the website.');
-                });
-            }
-        }
-    </script>
-
-</body>
-</html>
+     
