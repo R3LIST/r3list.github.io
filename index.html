@@ -117,9 +117,24 @@
                 const query = document.getElementById("search").value;
                 const proxyUrl = "https://cors-anywhere.herokuapp.com/";  // Using a free proxy service
                 const targetUrl = query.startsWith('http') ? query : 'http://' + query;
-                
-                // Redirecting to the site using proxy
-                window.location.href = proxyUrl + targetUrl;
+
+                // Fetch request with required headers to bypass CORS restriction
+                fetch(proxyUrl + targetUrl, {
+                    method: 'GET',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'Origin': 'https://yourdomain.com'  // This should be your site's URL
+                    }
+                })
+                .then(response => response.text())
+                .then(data => {
+                    // Redirect to the target page using the proxy
+                    window.location.href = proxyUrl + targetUrl;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while trying to access the website.');
+                });
             }
         }
     </script>
