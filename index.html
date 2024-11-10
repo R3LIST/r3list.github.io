@@ -77,6 +77,7 @@
             margin-left: 20px;
             background-image: url('https://static.vecteezy.com/system/resources/thumbnails/030/504/836/small/avatar-account-flat-isolated-on-transparent-background-for-graphic-and-web-design-default-social-media-profile-photo-symbol-profile-and-people-silhouette-user-icon-vector.jpg');
             background-size: cover;
+            background-position: center; /* Center the image */
         }
 
         /* Content Styles */
@@ -96,12 +97,7 @@
             font-size: 18px;
             padding: 12px 25px;
             display: inline-block;
-            transition: background-color 0.3s ease, color 0.3s ease;
             color: white;
-        }
-
-        #bioText:hover {
-            background-color: #444;
         }
 
         /* Buttons */
@@ -138,6 +134,14 @@
             opacity: 0; /* Invisible */
             cursor: pointer;
         }
+
+        /* Main Content Background */
+        .main-content {
+            background: url('https://media.makeagif.com/media/2-23-2024/X_tUpu.gif') no-repeat center center fixed; 
+            background-size: cover;
+            min-height: 100vh;
+            padding-top: 50px; /* Spacing to not overlap with navbar */
+        }
     </style>
 </head>
 <body>
@@ -150,7 +154,7 @@
         <!-- Navigation Links -->
         <div class="nav-links">
             <a href="#">Home</a>
-            <a href="games.html">Games</a>
+            <a href="games.html">Apps</a>
             <a href="https://project-r3list.webflow.io/" target="_blank">Old r3list</a>
         </div>
 
@@ -158,23 +162,30 @@
         <div class="date-time">
             <div class="date" id="currentDate"></div>
             <div class="time" id="currentTime"></div>
-            <div class="circle" id="profileCircle"></div>
         </div>
     </div>
 
-    <!-- Bio Section -->
-    <h1>r<span class="red-three">3</span>list</h1>
-    <p id="bioText"></p>
-    <p>I'm here!</p>
+    <!-- Circle outside of Navbar -->
+    <div class="circle" style="position: absolute; top: 15px; right: 20px;"></div>
 
-    <!-- Buttons below the bio -->
-    <div class="btn-container">
-        <button class="btn" onclick="window.location.href='https://project-r3list.webflow.io/'">Old r3list</button>
-        <button class="btn" onclick="window.location.href='games.html'">Games</button>
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <!-- Page Title -->
+        <h1>r<span class="red-three">3</span>list</h1>
+
+        <!-- Bio Section -->
+        <p id="bioText"></p>
+        <p>I'm here!</p>
+
+        <!-- Buttons below the bio -->
+        <div class="btn-container">
+            <button class="btn" onclick="window.location.href='https://project-r3list.webflow.io/'">Old r3list</button>
+            <button class="btn" onclick="window.location.href='games.html'">Apps</button>
+        </div>
+
+        <!-- Invisible Button for Secret Notification -->
+        <div class="secret-button" onclick="alert('(1/2)');"></div>
     </div>
-
-    <!-- Invisible Button for Secret Notification -->
-    <div class="secret-button" onclick="alert('(1/2)');"></div>
 
     <script>
         // Array of 10 different bio texts
