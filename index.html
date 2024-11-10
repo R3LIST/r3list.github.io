@@ -1,5 +1,4 @@
 
-     
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,29 +48,28 @@
             font-size: 20px;
         }
 
-        /* Search Bar */
-        .search-container {
+        /* Buttons */
+        .btn-container {
             margin-top: 30px;
             display: flex;
             justify-content: center;
+            gap: 15px;
         }
 
-        .search-bar {
-            width: 100%;
-            max-width: 400px;
-            padding: 15px;
+        .btn {
+            padding: 12px 25px;
             font-size: 18px;
             border: 2px solid white;
-            border-radius: 5px;
             background-color: transparent;
             color: white;
-            outline: none;
-            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .search-bar:focus {
-            border-color: #ff3e3e; /* Red border when focused */
-            box-shadow: 0 0 10px rgba(255, 63, 63, 0.6); /* Red glow on focus */
+        .btn:hover {
+            background-color: #444;
         }
 
     </style>
@@ -81,15 +79,16 @@
     <h1>r<span class="red-three">3</span>list</h1>
 
     <!-- Bio Section: Clickable bio text -->
-    <div id="bio" onclick="changeBio()">Click to see mytyrttr bio</div>
+    <div id="bio" onclick="changeBio()">Click to see my bio</div>
 
     <p id="bioText">This is where the bio will appear after clicking above.</p>
 
     <p>I'm here!</p>
 
-    <!-- Search Bar Section -->
-    <div class="search-container">
-        <input type="text" id="search" class="search-bar" placeholder="Search for a website..." onkeydown="handleSearch(event)">
+    <!-- Buttons below the search -->
+    <div class="btn-container">
+        <button class="btn" onclick="window.location.href='https://project-r3list.webflow.io/'">Old r3list</button>
+        <button class="btn" onclick="window.location.href='games.html'">Games</button>
     </div>
 
     <script>
@@ -111,23 +110,6 @@
         function changeBio() {
             const randomIndex = Math.floor(Math.random() * bioTexts.length);
             document.getElementById("bioText").innerText = bioTexts[randomIndex];
-        }
-
-        // Function to handle the search and open the website using ProxySite
-        function handleSearch(event) {
-            if (event.key === 'Enter') {
-                const query = document.getElementById("search").value;
-                const targetUrl = query.startsWith('http') ? query : 'http://' + query;
-
-                // ProxySite URL (no signup or API key required)
-                const proxyUrl = `https://www.proxysite.com/`;
-
-                // Full URL to open with the proxy
-                const finalUrl = `${proxyUrl}?c=proxy&url=${encodeURIComponent(targetUrl)}`;
-
-                // Redirect to the site using ProxySite
-                window.location.href = finalUrl;
-            }
         }
     </script>
 
