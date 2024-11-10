@@ -20,7 +20,7 @@
         /* Navbar Styles */
         .navbar {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start; /* Align items to the left */
             align-items: center;
             background-color: black; /* Same as the body background */
             padding: 10px 20px;
@@ -39,9 +39,8 @@
 
         .navbar .nav-links {
             display: flex;
-            justify-content: space-between;
-            gap: 15px; /* Smaller and closer together */
-            margin-left: 30px; /* Space them equally from the logo */
+            gap: 15px; /* Same distance between buttons */
+            margin-left: 20px; /* Closer to the logo */
         }
 
         .navbar .nav-links a {
@@ -62,6 +61,7 @@
             align-items: center;
             font-size: 18px;
             color: white;
+            margin-left: auto; /* Push to the far right */
         }
 
         .navbar .date-time .date, .navbar .date-time .time {
@@ -75,6 +75,8 @@
             background-color: transparent;
             border: 2px solid white;
             margin-left: 20px;
+            background-image: url('https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'); /* Placeholder profile picture */
+            background-size: cover;
         }
 
         /* Content Styles */
@@ -146,7 +148,7 @@
         <div class="date-time">
             <div class="date" id="currentDate"></div>
             <div class="time" id="currentTime"></div>
-            <div class="circle"></div>
+            <div class="circle" id="profileCircle"></div>
         </div>
     </div>
 
