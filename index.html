@@ -20,7 +20,7 @@
         /* Navbar Styles */
         .navbar {
             display: flex;
-            justify-content: flex-start; /* Align items to the left */
+            justify-content: space-between; /* Space out items */
             align-items: center;
             background-color: black; /* Same as the body background */
             padding: 10px 20px;
@@ -76,7 +76,7 @@
             margin-left: 10px;
         }
 
-        /* Circle with profile image outside the navbar */
+        /* Circle with profile image in the navbar */
         .profile-circle {
             width: 30px;
             height: 30px;
@@ -86,16 +86,15 @@
             background-image: url('https://static.vecteezy.com/system/resources/thumbnails/030/504/836/small/avatar-account-flat-isolated-on-transparent-background-for-graphic-and-web-design-default-social-media-profile-photo-symbol-profile-and-people-silhouette-user-icon-vector.jpg');
             background-size: cover;
             background-position: center;
-            position: fixed;
-            top: 20px;
+            position: absolute;
             right: 20px;
         }
 
         /* Content Styles */
         h1 {
-            font-size: 80px; /* Bigger logo */
+            font-size: 60px; /* Slightly smaller logo */
             color: white;
-            margin-top: 100px;
+            margin-top: 50px; /* Reduced spacing */
         }
 
         .red-three {
@@ -104,7 +103,7 @@
 
         /* Bio Section */
         #bioText {
-            margin-top: 20px;
+            margin-top: 10px;
             font-size: 18px;
             padding: 12px 25px;
             display: inline-block;
@@ -179,7 +178,7 @@
         </div>
     </div>
 
-    <!-- Profile Circle outside of Navbar -->
+    <!-- Profile Circle in Navbar -->
     <div class="profile-circle"></div>
 
     <!-- Main Content Section -->
@@ -247,3 +246,4 @@
 
 </body>
 </html>
+
