@@ -1,3 +1,5 @@
+
+     
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -105,7 +107,29 @@
             "A digital wanderer and tech enthusiast."
         ];
 
-        // Function to change bio text to a random entry
+        // Function to change bio text to a random entry when clicked
         function changeBio() {
             const randomIndex = Math.floor(Math.random() * bioTexts.length);
-     
+            document.getElementById("bioText").innerText = bioTexts[randomIndex];
+        }
+
+        // Function to handle the search and open the website using ProxySite
+        function handleSearch(event) {
+            if (event.key === 'Enter') {
+                const query = document.getElementById("search").value;
+                const targetUrl = query.startsWith('http') ? query : 'http://' + query;
+
+                // ProxySite URL (no signup or API key required)
+                const proxyUrl = `https://www.proxysite.com/`;
+
+                // Full URL to open with the proxy
+                const finalUrl = `${proxyUrl}?c=proxy&url=${encodeURIComponent(targetUrl)}`;
+
+                // Redirect to the site using ProxySite
+                window.location.href = finalUrl;
+            }
+        }
+    </script>
+
+</body>
+</html>
