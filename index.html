@@ -163,10 +163,10 @@
             <div class="date" id="currentDate"></div>
             <div class="time" id="currentTime"></div>
         </div>
-    </div>
 
-    <!-- Circle outside of Navbar -->
-    <div class="circle" style="position: absolute; top: 15px; right: 20px;"></div>
+        <!-- Circle inside the navbar -->
+        <div class="circle"></div>
+    </div>
 
     <!-- Main Content Section -->
     <div class="main-content">
@@ -188,18 +188,18 @@
     </div>
 
     <script>
-        // Array of 10 different bio texts
+        // Array of 10 new bio texts
         const bioTexts = [
-            "I love coding and web development.",
-            "Currently learning JavaScript and React.",
-            "I enjoy solving puzzles and problem-solving.",
-            "A coffee lover who codes at night.",
-            "Exploring new technologies and frameworks.",
-            "Always curious about how things work.",
-            "Part-time gamer, full-time coder.",
-            "Believer in continuous learning and growth.",
-            "Enjoys both creative and technical challenges.",
-            "A digital wanderer and tech enthusiast."
+            "v6 soon, maybe",
+            `happy ${new Date().toLocaleString('default', { month: 'long' })}`,
+            "August 12th, 2036",
+            "check out the old r3list, whenever",
+            "Hello, World!",
+            "more stuff soon",
+            "better than the old r3list",
+            "BSL_r3list-S-EDI",
+            "32x32 image format",
+            "html is very easy to learn"
         ];
 
         // Function to change bio text to a random entry when the page is loaded
@@ -233,3 +233,4 @@
 
 </body>
 </html>
+
