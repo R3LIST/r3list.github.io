@@ -37,10 +37,18 @@
             color: red; /* Red 3 */
         }
 
+        /* Small vertical line */
+        .vertical-line {
+            height: 20px; /* Adjusted to be around the height of the "H" */
+            width: 2px; /* Thin line */
+            background-color: #222; /* Same as the button outlines */
+            margin-left: 10px; /* Small gap between logo and line */
+            margin-right: 10px; /* Small gap between line and "Home" button */
+        }
+
         .navbar .nav-links {
             display: flex;
             gap: 15px; /* Same distance between buttons */
-            margin-left: 20px; /* Closer to the logo */
         }
 
         .navbar .nav-links a {
@@ -68,16 +76,19 @@
             margin-left: 10px;
         }
 
-        .navbar .circle {
+        /* Circle with profile image outside the navbar */
+        .profile-circle {
             width: 30px;
             height: 30px;
             border-radius: 50%;
             background-color: transparent;
             border: 2px solid white;
-            margin-left: 20px;
             background-image: url('https://static.vecteezy.com/system/resources/thumbnails/030/504/836/small/avatar-account-flat-isolated-on-transparent-background-for-graphic-and-web-design-default-social-media-profile-photo-symbol-profile-and-people-silhouette-user-icon-vector.jpg');
             background-size: cover;
-            background-position: center; /* Center the image */
+            background-position: center;
+            position: fixed;
+            top: 20px;
+            right: 20px;
         }
 
         /* Content Styles */
@@ -127,9 +138,9 @@
         /* Invisible Button */
         .secret-button {
             position: absolute;
-            top: 10px;
-            right: 20px;
-            width: 120px; /* Same width as home button */
+            bottom: 10px;
+            left: 20px;
+            width: 120px; /* Same width as "Apps" button */
             height: 40px;
             opacity: 0; /* Invisible */
             cursor: pointer;
@@ -151,6 +162,9 @@
         <!-- Logo -->
         <div class="logo">r<span class="red-three">3</span></div>
 
+        <!-- Vertical Line between logo and Home -->
+        <div class="vertical-line"></div>
+
         <!-- Navigation Links -->
         <div class="nav-links">
             <a href="#">Home</a>
@@ -158,15 +172,15 @@
             <a href="https://project-r3list.webflow.io/" target="_blank">Old r3list</a>
         </div>
 
-        <!-- Date/Time and Circle -->
+        <!-- Date/Time -->
         <div class="date-time">
             <div class="date" id="currentDate"></div>
             <div class="time" id="currentTime"></div>
         </div>
-
-        <!-- Circle inside the navbar -->
-        <div class="circle"></div>
     </div>
+
+    <!-- Profile Circle outside of Navbar -->
+    <div class="profile-circle"></div>
 
     <!-- Main Content Section -->
     <div class="main-content">
@@ -233,4 +247,3 @@
 
 </body>
 </html>
-
