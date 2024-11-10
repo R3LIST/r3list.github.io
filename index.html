@@ -47,37 +47,29 @@
             font-size: 20px;
         }
 
-        /* Button Styles */
-        .button-container {
+        /* Search Bar */
+        .search-container {
+            margin-top: 30px;
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
         }
 
-        .button {
-            background-color: black;
-            color: white;
-            border: 1px solid white; /* Thinner white outline */
-            padding: 16px 40px;
+        .search-bar {
+            width: 100%;
+            max-width: 400px;
+            padding: 15px;
             font-size: 18px;
-            cursor: pointer;
-            margin: 10px;
+            border: 2px solid white;
             border-radius: 5px;
+            background-color: transparent;
+            color: white;
+            outline: none;
             transition: all 0.3s ease;
-            flex: 1; /* Makes buttons equally sized */
-            max-width: 200px; /* Maximum width for each button */
-            box-shadow: 0 0 8px rgba(255, 0, 0, 0.6); /* Light red glow */
         }
 
-        .button:hover {
-            background-color: #333;
-            border-color: #ccc;
-            box-shadow: 0 0 12px rgba(255, 0, 0, 0.8); /* Stronger glow on hover */
-        }
-
-        .button:active {
-            background-color: #111;
+        .search-bar:focus {
+            border-color: #ff3e3e; /* Red border when focused */
+            box-shadow: 0 0 10px rgba(255, 63, 63, 0.6); /* Red glow on focus */
         }
 
     </style>
@@ -93,7 +85,44 @@
 
     <p>I'm here!</p>
 
-    <div class="button-container">
-        <!-- Updated Button with 'about:blank' function -->
-        <button class="button" onclick="goAboutBlan
+    <!-- Search Bar Section -->
+    <div class="search-container">
+        <input type="text" id="search" class="search-bar" placeholder="Search for a website..." onkeydown="handleSearch(event)">
+    </div>
 
+    <script>
+        // Array of 10 different bio texts
+        const bioTexts = [
+            "I love coding and web development.",
+            "Currently learning JavaScript and React.",
+            "I enjoy solving puzzles and problem-solving.",
+            "A coffee lover who codes at night.",
+            "Exploring new technologies and frameworks.",
+            "Always curious about how things work.",
+            "Part-time gamer, full-time coder.",
+            "Believer in continuous learning and growth.",
+            "Enjoys both creative and technical challenges.",
+            "A digital wanderer and tech enthusiast."
+        ];
+
+        // Function to change bio text to a random entry
+        function changeBio() {
+            const randomIndex = Math.floor(Math.random() * bioTexts.length);
+            document.getElementById("bioText").innerText = bioTexts[randomIndex];
+        }
+
+        // Function to handle the search and open the website using a proxy
+        function handleSearch(event) {
+            if (event.key === 'Enter') {
+                const query = document.getElementById("search").value;
+                const proxyUrl = "https://cors-anywhere.herokuapp.com/";  // Using a free proxy service
+                const targetUrl = query.startsWith('http') ? query : 'http://' + query;
+                
+                // Redirecting to the site using proxy
+                window.location.href = proxyUrl + targetUrl;
+            }
+        }
+    </script>
+
+</body>
+</html>
