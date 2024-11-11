@@ -11,7 +11,7 @@
         body {
             background-color: black;
             color: white;
-            font-family: 'Be Vietnam Pro', sans-serif; /* Updated font */
+            font-family: 'Be Vietnam Pro', sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
@@ -28,6 +28,7 @@
             position: relative;
         }
 
+        /* Logo */
         .navbar .logo {
             font-size: 30px;
             color: white;
@@ -47,9 +48,10 @@
             margin-right: 10px;
         }
 
+        /* Navigation Links */
         .navbar .nav-links {
             display: flex;
-            gap: 15px;
+            gap: 10px; /* Closer spacing between buttons */
         }
 
         .navbar .nav-links a {
@@ -65,7 +67,7 @@
             background-color: #444;
         }
 
-        /* Profile Circle - Moved to the right side */
+        /* Profile Circle */
         .profile-circle {
             width: 30px;
             height: 30px;
@@ -79,11 +81,18 @@
             right: 20px;
         }
 
+        /* Date and Time */
+        .date-time-container {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Small gap between date, time, and profile */
+        }
+
         /* Content Styles */
         h1 {
             font-size: 60px;
             color: white;
-            margin-top: 30px; /* Reduced top margin to bring it closer to the bio */
+            margin-top: 30px;
         }
 
         .red-three {
@@ -103,7 +112,7 @@
         .search-bar {
             margin-top: 20px;
             padding: 12px;
-            width: 300px; /* Set a fixed width similar to button length */
+            width: 300px;
             border-radius: 5px;
             border: 2px solid #444;
             color: white;
@@ -112,7 +121,7 @@
         }
 
         .search-bar:hover {
-            width: 350px; /* Expands slightly on hover */
+            width: 350px;
         }
 
         /* Buttons Container */
@@ -126,7 +135,7 @@
         .btn {
             padding: 12px 25px;
             font-size: 18px;
-            border: 2px solid #222; /* Darker gray outline */
+            border: 2px solid #222; 
             background-color: transparent;
             color: white;
             cursor: pointer;
@@ -152,10 +161,8 @@
 
     <!-- Navbar -->
     <div class="navbar">
-        <!-- Logo -->
+        <!-- Logo and Vertical Line -->
         <div class="logo">r<span class="red-three">3</span></div>
-
-        <!-- Vertical Line between logo and Home -->
         <div class="vertical-line"></div>
 
         <!-- Navigation Links -->
@@ -165,13 +172,14 @@
             <a href="https://project-r3list.webflow.io/" target="_blank">Old r3list</a>
         </div>
 
-        <!-- Profile Circle in Navbar -->
-        <div class="profile-circle"></div>
-
-        <!-- Date/Time -->
-        <div class="date-time">
+        <!-- Date and Time Section (aligned to the right) -->
+        <div class="date-time-container">
+            <!-- Date -->
             <div class="date" id="currentDate"></div>
+            <!-- Time -->
             <div class="time" id="currentTime"></div>
+            <!-- Profile Circle -->
+            <div class="profile-circle"></div>
         </div>
     </div>
 
