@@ -111,16 +111,17 @@
         /* App Card */
         .app-card {
             width: 250px;
-            height: 150px;
+            height: 180px;
             background-color: #222;
             color: white;
             border: 2px solid #111;
             border-radius: 15px;
-            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            padding: 15px;
+            text-align: center;
         }
 
         .icon-placeholder {
@@ -134,7 +135,18 @@
             justify-content: center;
             font-size: 12px;
             color: white;
-            margin-bottom: 10px; /* Adjust spacing below icon */
+            margin-bottom: 10px;
+        }
+
+        .app-name {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .app-description {
+            font-size: 14px;
+            color: #ccc;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -164,29 +176,38 @@
 
     <!-- App Cards in Rows -->
     <div class="app-container">
+        <!-- First Row -->
         <div class="app-card">
             <div class="icon-placeholder">Icon 1</div>
-            <span>App Name 1</span>
+            <div class="app-name">App Name 1</div>
+            <div class="app-description">Description for app 1.</div>
         </div>
         <div class="app-card">
             <div class="icon-placeholder">Icon 2</div>
-            <span>App Name 2</span>
+            <div class="app-name">App Name 2</div>
+            <div class="app-description">Description for app 2.</div>
         </div>
         <div class="app-card">
             <div class="icon-placeholder">Icon 3</div>
-            <span>App Name 3</span>
+            <div class="app-name">App Name 3</div>
+            <div class="app-description">Description for app 3.</div>
         </div>
+
+        <!-- Second Row -->
         <div class="app-card">
             <div class="icon-placeholder">Icon 4</div>
-            <span>App Name 4</span>
+            <div class="app-name">App Name 4</div>
+            <div class="app-description">Description for app 4.</div>
         </div>
         <div class="app-card">
             <div class="icon-placeholder">Icon 5</div>
-            <span>App Name 5</span>
+            <div class="app-name">App Name 5</div>
+            <div class="app-description">Description for app 5.</div>
         </div>
         <div class="app-card">
             <div class="icon-placeholder">Icon 6</div>
-            <span>App Name 6</span>
+            <div class="app-name">App Name 6</div>
+            <div class="app-description">Description for app 6.</div>
         </div>
     </div>
 
