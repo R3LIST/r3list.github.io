@@ -1,166 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>r3list</title>
-    <!-- Google Fonts link for Be Vietnam Pro -->
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* Basic Styles */
-        body {
-            background-color: black;
-            color: white;
-            font-family: 'Be Vietnam Pro', sans-serif; /* Updated font */
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Navbar Styles */
-        .navbar {
-            display: flex;
-            justify-content: flex-start; /* Align items to the left */
-            align-items: center;
-            background-color: black; /* Same as the body background */
-            padding: 10px 20px;
-            border-bottom: 2px solid #444; /* Thin line separating navbar from main content */
-        }
-
-        .navbar .logo {
-            font-size: 30px;
-            color: white;
-            font-weight: bold;
-        }
-
-        .navbar .logo span {
-            color: red; /* Red 3 */
-        }
-
-        /* Small vertical line */
-        .vertical-line {
-            height: 20px; /* Adjusted to be around the height of the "H" */
-            width: 2px; /* Thin line */
-            background-color: #222; /* Same as the button outlines */
-            margin-left: 10px; /* Small gap between logo and line */
-            margin-right: 10px; /* Small gap between line and "Home" button */
-        }
-
-        .navbar .nav-links {
-            display: flex;
-            gap: 15px; /* Same distance between buttons */
-        }
-
-        .navbar .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            padding: 8px 15px; /* Smaller buttons */
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .navbar .nav-links a:hover {
-            background-color: #444;
-        }
-
-        .navbar .date-time {
-            display: flex;
-            align-items: center;
-            font-size: 18px;
-            color: white;
-            margin-left: auto; /* Push to the far right */
-        }
-
-        .navbar .date-time .date, .navbar .date-time .time {
-            margin-left: 5px;
-        }
-
-           /* Profile Circle (outside the navbar on the far right) */
-        .profile-circle {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: transparent;
-            border: 2px solid white;
-            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/030/504/836/small/avatar-account-flat-isolated-on-transparent-background-for-graphic-and-web-design-default-social-media-profile-photo-symbol-profile-and-people-silhouette-user-icon-vector.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Content Styles */
-        h1 {
-            font-size: 80px; /* Bigger logo */
-            color: white;
-            margin-top: 100px;
-        }
-
-        .red-three {
-            color: red;
-        }
-
-        /* Bio Section */
-        #bioText {
-            margin-top: 20px;
-            font-size: 18px;
-            padding: 12px 25px;
-            display: inline-block;
-            color: white;
-        }
-
-        /* Buttons */
-        .btn-container {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .btn {
-            padding: 12px 25px;
-            font-size: 18px;
-            border: 2px solid #222; /* Darker gray outline */
-            background-color: transparent;
-            color: white;
-            cursor: pointer;
-            display: inline-block;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #444;
-        }
-
-        /* Invisible Button */
-        .secret-button {
-            position: absolute;
-            bottom: 10px;
-            left: 20px;
-            width: 120px; /* Same width as "Apps" button */
-            height: 40px;
-            opacity: 0; /* Invisible */
-            cursor: pointer;
-        }
-
-        /* Main Content Background */
-        .main-content {
-            background: url('https://media.makeagif.com/media/2-23-2024/X_tUpu.gif') no-repeat center center fixed; 
-            background-size: cover;
-            min-height: 100vh;
-            padding-top: 50px; /* Spacing to not overlap with navbar */
-        }
-    </style>
-</head>
 <body>
 
     <!-- Navbar -->
     <div class="navbar">
         <!-- Logo -->
         <div class="logo">r<span class="red-three">3</span></div>
-
-        <!-- Vertical Line between logo and Home -->
-        <div class="vertical-line"></div>
 
         <!-- Navigation Links -->
         <div class="nav-links">
@@ -181,10 +24,7 @@
 
     <!-- Main Content Section -->
     <div class="main-content">
-        <!-- Page Title -->
         <h1>r<span class="red-three">3</span>list</h1>
-
-        <!-- Bio Section -->
         <p id="bioText"></p>
         <p>I'm here!</p>
 
@@ -243,4 +83,3 @@
     </script>
 
 </body>
-</html>
