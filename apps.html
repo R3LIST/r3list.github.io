@@ -92,43 +92,49 @@
             font-weight: bold;
         }
 
-        /* App Cards */
-        .app-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            margin-top: 60px;
+        /* Apps Title */
+        .apps-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 40px;
         }
 
+        /* App Container */
+        .app-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* App Card */
         .app-card {
-            width: 80%;
-            max-width: 500px;
-            height: 120px;
+            width: 250px;
+            height: 150px;
             background-color: #222;
             color: white;
             border: 2px solid #111;
             border-radius: 15px;
+            position: relative;
             display: flex;
             align-items: center;
-            position: relative;
-            padding-left: 90px; /* Space for icon */
+            justify-content: center;
+            flex-direction: column;
         }
 
-        .app-card .icon-placeholder {
-            position: absolute;
-            left: 15px;
-            top: -20px; /* Place icon partially outside the card */
-            width: 80px;
-            height: 80px;
+        .icon-placeholder {
+            width: 60px;
+            height: 60px;
             background-color: #444;
             border: 2px solid #111;
-            border-radius: 15px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 12px;
             color: white;
+            margin-bottom: 10px; /* Adjust spacing below icon */
         }
     </style>
 </head>
@@ -153,9 +159,11 @@
     <!-- Version Text -->
     <div class="version-text">v6</div>
 
-    <!-- App Cards -->
+    <!-- Apps Title -->
+    <div class="apps-title">Apps</div>
+
+    <!-- App Cards in Rows -->
     <div class="app-container">
-        <!-- First Row of App Cards -->
         <div class="app-card">
             <div class="icon-placeholder">Icon 1</div>
             <span>App Name 1</span>
@@ -168,8 +176,6 @@
             <div class="icon-placeholder">Icon 3</div>
             <span>App Name 3</span>
         </div>
-
-        <!-- Second Row of App Cards -->
         <div class="app-card">
             <div class="icon-placeholder">Icon 4</div>
             <span>App Name 4</span>
