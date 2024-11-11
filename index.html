@@ -25,10 +25,9 @@
             background-color: black;
             padding: 10px 20px;
             border-bottom: 2px solid #444;
-            position: relative;
         }
 
-        /* Logo */
+        /* Left side of the navbar */
         .navbar .logo {
             font-size: 30px;
             color: white;
@@ -41,11 +40,10 @@
             color: red;
         }
 
-        /* Navigation Links */
         .navbar .nav-links {
             display: flex;
             gap: 15px;
-            margin-left: 15px; /* Adjust this to bring buttons closer to "r3" */
+            margin-left: 20px; /* Adjust this to bring buttons closer to "r3" */
         }
 
         .navbar .nav-links a {
@@ -61,7 +59,14 @@
             background-color: #444;
         }
 
-        /* Profile Circle (outside the navbar) */
+        /* Date, Time, and Profile Circle (far right) */
+        .right-side {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Profile Circle (outside the navbar on the far right) */
         .profile-circle {
             width: 30px;
             height: 30px;
@@ -71,19 +76,13 @@
             background-image: url('https://static.vecteezy.com/system/resources/thumbnails/030/504/836/small/avatar-account-flat-isolated-on-transparent-background-for-graphic-and-web-design-default-social-media-profile-photo-symbol-profile-and-people-silhouette-user-icon-vector.jpg');
             background-size: cover;
             background-position: center;
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
         }
 
         /* Date and Time */
         .date-time-container {
             display: flex;
             align-items: center;
-            gap: 10px; /* Small gap between date and time */
-            position: absolute;
-            right: 60px; /* Position the date/time a bit to the left so it doesn't overlap with the profile circle */
+            gap: 10px;
         }
 
         /* Content Styles */
@@ -159,26 +158,24 @@
 
     <!-- Navbar -->
     <div class="navbar">
-        <!-- Logo -->
+        <!-- Left Side: Logo and Buttons -->
         <div class="logo">r<span class="red-three">3</span></div>
-
-        <!-- Navigation Links (Now aligned to the left side of the navbar) -->
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="games.html">Apps</a>
-            <a href="https://project-r3list.webflow.io/" target="_blank">Old r3list</a>
+            <a href="#">Settings</a>
         </div>
 
-        <!-- Date and Time Section (aligned to the right) -->
-        <div class="date-time-container">
-            <!-- Date -->
-            <div class="date" id="currentDate"></div>
-            <!-- Time -->
-            <div class="time" id="currentTime"></div>
+        <!-- Right Side: Date, Time, Profile Circle -->
+        <div class="right-side">
+            <!-- Date and Time -->
+            <div class="date-time-container">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+            </div>
+            <!-- Profile Circle -->
+            <div class="profile-circle"></div>
         </div>
-
-        <!-- Profile Circle (inside the navbar on the right) -->
-        <div class="profile-circle"></div>
     </div>
 
     <!-- Main Content Section -->
