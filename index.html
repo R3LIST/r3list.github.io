@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -44,8 +44,8 @@
             height: 20px;
             width: 2px;
             background-color: #222;
-            margin-left: 10px;
-            margin-right: 10px;
+            margin-left: 5px;  /* Reduced space */
+            margin-right: 5px; /* Reduced space */
         }
 
         /* Navigation Links */
@@ -85,7 +85,7 @@
         .date-time-container {
             display: flex;
             align-items: center;
-            gap: 10px; /* Small gap between date, time, and profile */
+            gap: 10px; /* Small gap between date and time */
         }
 
         /* Content Styles */
@@ -178,9 +178,10 @@
             <div class="date" id="currentDate"></div>
             <!-- Time -->
             <div class="time" id="currentTime"></div>
-            <!-- Profile Circle -->
-            <div class="profile-circle"></div>
         </div>
+
+        <!-- Profile Circle (outside the navbar) -->
+        <div class="profile-circle"></div>
     </div>
 
     <!-- Main Content Section -->
