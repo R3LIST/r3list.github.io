@@ -6,249 +6,122 @@
     <title>Apps</title>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Basic Styles */
-        body {
-            background-color: black;
-            color: white;
-            font-family: 'Be Vietnam Pro', sans-serif;
+        /* Add your existing styles here */
+
+        /* App Card Styles */
+        .app-card {
+            background-color: #222;
+            border-radius: 10px;
+            margin: 15px;
+            padding: 20px;
+            width: 250px;
             text-align: center;
-            margin: 0;
-            padding: 0;
+            color: white;
+            position: relative;
         }
 
-        /* Navbar Styles */
-        .navbar {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            background-color: black;
+        .app-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+            position: relative;
+            top: -40px; /* Push the image outside of the rectangle */
+        }
+
+        .app-card .description {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .app-card .launch-button {
+            background-color: #444;
+            border: none;
+            color: white;
             padding: 10px 20px;
-            border-bottom: 2px solid #222;
-        }
-
-        .navbar .logo {
-            font-size: 30px;
-            color: white;
-            font-weight: bold;
-        }
-
-        .navbar .logo span {
-            color: red;
-        }
-
-        .vertical-line {
-            height: 20px;
-            width: 2px;
-            background-color: #111;
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-
-        .navbar .nav-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .navbar .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            padding: 8px 15px;
             border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 16px;
             transition: background-color 0.3s ease;
         }
 
-        .navbar .nav-links a:hover {
-            background-color: #444;
+        .app-card .launch-button:hover {
+            background-color: #666;
         }
 
-        .navbar .date-time {
+        /* Flexbox for arranging app cards in rows */
+        .app-row {
             display: flex;
-            align-items: center;
-            font-size: 18px;
-            color: white;
-            margin-left: auto;
-            margin-right: 20px;
-        }
-
-        .date-time .circle {
-            width: 30px;
-            height: 30px;
-            border: 2px solid white;
-            border-radius: 50%;
-            margin-left: 10px;
-        }
-
-        .date-time .date {
-            margin-right: 15px;
-        }
-
-        /* Version Text */
-        .version-text {
-            position: absolute;
-            top: 70px;
-            right: 20px;
-            font-size: 18px;
-            color: white;
-            background-color: rgba(255, 0, 0, 0.3);
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        /* Apps Title */
-        .apps-title {
-            font-size: 36px;
-            font-weight: bold;
-            margin-top: 40px;
-        }
-
-        /* App Container */
-        .app-container {
-            display: flex;
+            justify-content: center;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 20px;
         }
 
-        /* App Card */
-        .app-card {
-            width: 250px;
-            height: 220px;
-            background-color: #222;
-            color: white;
-            border: 2px solid #111;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding: 15px;
-            text-align: center;
-        }
-
-        .icon-placeholder {
-            width: 60px;
-            height: 60px;
-            background-color: #444;
-            border: 2px solid #111;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: white;
-            margin-bottom: 10px;
-        }
-
-        .app-name {
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .app-description {
-            font-size: 14px;
-            color: #ccc;
-            margin-top: 5px;
-        }
-
-        /* Launch Button */
-        .launch-button {
-            margin-top: 15px;
-            padding: 8px 20px;
-            background-color: #444;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .launch-button:hover {
-            background-color: #555;
+        .app-row .app-card {
+            margin: 10px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="logo">r<span class="red-three">3</span></div>
-        <div class="vertical-line"></div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="apps.html">Apps</a>
-            <a href="settings.html">Settings</a>
-        </div>
-        <div class="date-time">
-            <div class="date" id="currentDate"></div>
-            <div class="time" id="currentTime"></div>
-            <div class="circle"></div>
-        </div>
-    </div>
-
-    <!-- Version Text -->
-    <div class="version-text">v6</div>
+    <!-- Navbar (copy your existing navbar here) -->
 
     <!-- Apps Title -->
-    <div class="apps-title">Apps</div>
+    <h1 style="text-align: center; color: white; margin-top: 50px;">Apps</h1>
 
-    <!-- App Cards in Rows -->
-    <div class="app-container">
-        <!-- First Row -->
+    <!-- App Cards Section -->
+    <div class="app-row">
+        <!-- App Card 1: CS:GO Clicker -->
         <div class="app-card">
-            <div class="icon-placeholder">Icon 1</div>
-            <div class="app-name">App Name 1</div>
-            <div class="app-description">Description for app 1.</div>
-            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
+            <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="CS:GO Clicker">
+            <h3>CS:GO Clicker</h3>
+            <p class="description">Play CS:GO Clicker</p>
+            <button class="launch-button" onclick="window.location.href='csgoclicker.html'">Launch</button>
         </div>
+
+        <!-- App Card 2 (Duplicate for App Card 2) -->
         <div class="app-card">
-            <div class="icon-placeholder">Icon 2</div>
-            <div class="app-name">App Name 2</div>
-            <div class="app-description">Description for app 2.</div>
-            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
-        </div>
-        <div class="app-card">
-            <div class="icon-placeholder">Icon 3</div>
-            <div class="app-name">App Name 3</div>
-            <div class="app-description">Description for app 3.</div>
+            <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="Icon">
+            <h3>App Name 2</h3>
+            <p class="description">Description of App 2</p>
             <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
         </div>
 
-        <!-- Second Row -->
+        <!-- App Card 3 (Duplicate for App Card 3) -->
         <div class="app-card">
-            <div class="icon-placeholder">Icon 4</div>
-            <div class="app-name">App Name 4</div>
-            <div class="app-description">Description for app 4.</div>
-            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
-        </div>
-        <div class="app-card">
-            <div class="icon-placeholder">Icon 5</div>
-            <div class="app-name">App Name 5</div>
-            <div class="app-description">Description for app 5.</div>
-            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
-        </div>
-        <div class="app-card">
-            <div class="icon-placeholder">Icon 6</div>
-            <div class="app-name">App Name 6</div>
-            <div class="app-description">Description for app 6.</div>
+            <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="Icon">
+            <h3>App Name 3</h3>
+            <p class="description">Description of App 3</p>
             <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
         </div>
     </div>
 
-    <script>
-        function updateDateTime() {
-            const date = new Date();
-            const currentDate = date.toLocaleDateString('en-US');
-            const currentTime = date.toLocaleTimeString('en-US', { hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    <div class="app-row">
+        <!-- App Card 4 (Duplicate for App Card 4) -->
+        <div class="app-card">
+            <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="Icon">
+            <h3>App Name 4</h3>
+            <p class="description">Description of App 4</p>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
+        </div>
 
-            document.getElementById("currentDate").textContent = currentDate;
-            document.getElementById("currentTime").textContent = currentTime;
-        }
+        <!-- App Card 5 (Duplicate for App Card 5) -->
+        <div class="app-card">
+            <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="Icon">
+            <h3>App Name 5</h3>
+            <p class="description">Description of App 5</p>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
+        </div>
 
-        setInterval(updateDateTime, 1000);
-        updateDateTime();
-    </script>
+        <!-- App Card 6 (Duplicate for App Card 6) -->
+        <div class="app-card">
+            <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="Icon">
+            <h3>App Name 6</h3>
+            <p class="description">Description of App 6</p>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
+        </div>
+    </div>
+
 </body>
 </html>
