@@ -76,8 +76,8 @@
         }
 
         .navbar .date-time .circle {
-            width: 30px;
-            height: 30px;
+            width: 60px;
+            height: 60px;
             border: 2px solid white;
             border-radius: 50%;
             margin-left: 10px;
@@ -117,36 +117,6 @@
         .btn:hover {
             background-color: #444;
         }
-
-        /* Search Bar */
-        .search-bar-container {
-            margin-top: 30px;
-        }
-
-        .search-bar-container input[type="text"] {
-            padding: 10px;
-            font-size: 16px;
-            width: 300px;
-            border: 2px solid #111;
-            border-radius: 5px;
-            background-color: black;
-            color: white;
-            margin-right: 5px;
-        }
-
-        .search-bar-container input[type="submit"] {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: 2px solid #111;
-            border-radius: 5px;
-            background-color: #444;
-            color: white;
-            cursor: pointer;
-        }
-
-        .search-bar-container input[type="submit"]:hover {
-            background-color: #333;
-        }
     </style>
 </head>
 <body>
@@ -174,14 +144,6 @@
     <div class="btn-container">
         <button class="btn" onclick="window.location.href='settings.html'">Settings</button>
         <button class="btn" onclick="window.location.href='apps.html'">Apps</button>
-    </div>
-
-    <!-- Search Bar Section -->
-    <div class="search-bar-container">
-        <form action="https://yourproxyurl.com/search" method="GET" target="_blank">
-            <input type="text" name="q" placeholder="Search the web...">
-            <input type="submit" value="Search">
-        </form>
     </div>
 
     <script>
