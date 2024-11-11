@@ -138,6 +138,16 @@
             min-height: 100vh;
             padding-top: 50px; /* Spacing to not overlap with navbar */
         }
+
+        /* Version Text in top-right corner below navbar */
+        .version-text {
+            position: absolute;
+            top: 50px; /* Just below the navbar */
+            right: 20px;
+            font-size: 18px; /* Same size as the bio text */
+            color: white;
+            font-weight: normal;
+        }
     </style>
 </head>
 <body>
@@ -154,7 +164,7 @@
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="games.html">Apps</a>
-            <a href="https://project-r3list.webflow.io/" target="_blank">Old r3list</a>
+            <a href="#">Settings</a> <!-- Replaced Old r3list with Settings -->
         </div>
 
         <!-- Date/Time -->
@@ -174,13 +184,16 @@
 
         <!-- Buttons below the bio -->
         <div class="btn-container">
-            <button class="btn" onclick="window.location.href='https://project-r3list.webflow.io/'">Old r3list</button>
+            <button class="btn" onclick="window.location.href='#'">Settings</button> <!-- Replaced Old r3list with Settings -->
             <button class="btn" onclick="window.location.href='games.html'">Apps</button>
         </div>
 
         <!-- Invisible Button for Secret Notification -->
         <div class="secret-button" onclick="alert('(1/2)');"></div>
     </div>
+
+    <!-- Version Text in top-right corner below navbar -->
+    <div class="version-text">v5</div>
 
     <script>
         // Array of 10 new bio texts
