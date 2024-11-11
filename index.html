@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>r3list</title>
+    <title>Apps</title>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* Basic Styles */
@@ -62,7 +62,6 @@
             background-color: #444;
         }
 
-        /* Date/Time and Circle Styling */
         .navbar .date-time {
             display: flex;
             align-items: center;
@@ -72,70 +71,16 @@
             margin-right: 20px;
         }
 
-        .navbar .date-time .date, .navbar .date-time .time {
-            margin-left: 10px;
-        }
-
-        .navbar .date-time .circle {
-            width: 30px; /* Increased size */
-            height: 30px; /* Increased size */
+        .date-time .circle {
+            width: 30px;
+            height: 30px;
             border: 2px solid white;
             border-radius: 50%;
             margin-left: 10px;
         }
 
-        /* Page Title */
-        h1 {
-            font-size: 80px;
-            color: white;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        .red-three {
-            color: red;
-        }
-
-        /* Bio Section */
-        #bioText {
-            margin-top: 5px;
-            font-size: 18px;
-            padding: 12px 25px;
-            display: inline-block;
-            color: white;
-        }
-
-        /* Buttons */
-        .btn-container {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .btn {
-            padding: 12px 25px;
-            font-size: 18px;
-            font-family: 'Be Vietnam Pro', sans-serif;
-            border: 2px solid #111;
-            background-color: transparent;
-            color: white;
-            cursor: pointer;
-            display: inline-block;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            width: 150px; /* Uniform button size */
-        }
-
-        .btn:hover {
-            background-color: #444;
-        }
-
-        .main-content {
-            background: url('https://media.makeagif.com/media/2-23-2024/X_tUpu.gif') no-repeat center center fixed;
-            background-size: cover;
-            min-height: 100vh;
-            padding-top: 50px;
+        .date-time .date {
+            margin-right: 15px;
         }
 
         /* Version Text */
@@ -149,6 +94,86 @@
             padding: 5px 10px;
             border-radius: 5px;
             font-weight: bold;
+        }
+
+        /* Apps Title */
+        .apps-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+
+        /* App Container */
+        .app-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* App Card */
+        .app-card {
+            width: 250px;
+            height: 220px;
+            background-color: #222;
+            color: white;
+            border: 2px solid #111;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .icon-placeholder {
+            width: 60px;
+            height: 60px;
+            background-color: #444;
+            border: 2px solid #111;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .icon-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .app-name {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .app-description {
+            font-size: 14px;
+            color: #ccc;
+            margin-top: 5px;
+        }
+
+        /* Launch Button */
+        .launch-button {
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .launch-button:hover {
+            background-color: #555;
         }
     </style>
 </head>
@@ -166,44 +191,62 @@
         <div class="date-time">
             <div class="date" id="currentDate"></div>
             <div class="time" id="currentTime"></div>
-            <div class="circle"></div> <!-- Larger circle with white outline -->
+            <div class="circle"></div>
         </div>
     </div>
 
     <!-- Version Text -->
     <div class="version-text">v6</div>
 
-    <!-- Main Content Section -->
-    <div class="main-content">
-        <h1>r<span class="red-three">3</span>list</h1>
-        <p id="bioText"></p>
-        <div class="btn-container">
-            <button class="btn" onclick="window.location.href='settings.html'">Settings</button>
-            <button class="btn" onclick="window.location.href='apps.html'">Apps</button>
+    <!-- Apps Title -->
+    <div class="apps-title">Apps</div>
+
+    <!-- App Cards in Rows -->
+    <div class="app-container">
+        <!-- First Row -->
+        <div class="app-card">
+            <div class="icon-placeholder">
+                <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="CS:GO Clicker Icon">
+            </div>
+            <div class="app-name">CS:GO Clicker</div>
+            <div class="app-description">Play CS:GO Clicker</div>
+            <button class="launch-button" onclick="window.location.href='csgoclicker.html'">Launch</button>
+        </div>
+        <div class="app-card">
+            <div class="icon-placeholder">Icon 2</div>
+            <div class="app-name">App Name 2</div>
+            <div class="app-description">Description for app 2.</div>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
+        </div>
+        <div class="app-card">
+            <div class="icon-placeholder">Icon 3</div>
+            <div class="app-name">App Name 3</div>
+            <div class="app-description">Description for app 3.</div>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
+        </div>
+
+        <!-- Second Row -->
+        <div class="app-card">
+            <div class="icon-placeholder">Icon 4</div>
+            <div class="app-name">App Name 4</div>
+            <div class="app-description">Description for app 4.</div>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
+        </div>
+        <div class="app-card">
+            <div class="icon-placeholder">Icon 5</div>
+            <div class="app-name">App Name 5</div>
+            <div class="app-description">Description for app 5.</div>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
+        </div>
+        <div class="app-card">
+            <div class="icon-placeholder">Icon 6</div>
+            <div class="app-name">App Name 6</div>
+            <div class="app-description">Description for app 6.</div>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
         </div>
     </div>
 
     <script>
-        const bioTexts = [
-            "v6 soon, maybe",
-            `happy ${new Date().toLocaleString('default', { month: 'long' })}`,
-            "August 12th, 2036",
-            "check out the old r3list, whenever",
-            "Hello, World!",
-            "more stuff soon",
-            "better than the old r3list",
-            "BSL_r3list-S-EDI",
-            "32x32 image format",
-            "html is very easy to learn"
-        ];
-
-        function changeBio() {
-            const randomIndex = Math.floor(Math.random() * bioTexts.length);
-            document.getElementById("bioText").innerText = bioTexts[randomIndex];
-        }
-
-        changeBio();
-
         function updateDateTime() {
             const date = new Date();
             const currentDate = date.toLocaleDateString('en-US');
@@ -216,6 +259,5 @@
         setInterval(updateDateTime, 1000);
         updateDateTime();
     </script>
-
 </body>
 </html>
