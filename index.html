@@ -11,7 +11,7 @@
         body {
             background-color: black;
             color: white;
-            font-family: 'Be Vietnam Pro', sans-serif;
+            font-family: 'Be Vietnam Pro', sans-serif; /* Updated font */
             text-align: center;
             margin: 0;
             padding: 0;
@@ -22,9 +22,9 @@
             display: flex;
             justify-content: flex-start; /* Align items to the left */
             align-items: center;
-            background-color: black;
+            background-color: black; /* Same as the body background */
             padding: 10px 20px;
-            border-bottom: 2px solid #444;
+            border-bottom: 2px solid #444; /* Thin line separating navbar from main content */
         }
 
         .navbar .logo {
@@ -37,25 +37,25 @@
             color: red; /* Red 3 */
         }
 
-        /* Small vertical line between r3 and Home */
+        /* Small vertical line */
         .vertical-line {
-            height: 20px;
-            width: 2px;
-            background-color: #222;
-            margin-left: 10px;
-            margin-right: 10px;
+            height: 20px; /* Adjusted to be around the height of the "H" */
+            width: 2px; /* Thin line */
+            background-color: #222; /* Same as the button outlines */
+            margin-left: 20px; /* Increased gap between logo and line */
+            margin-right: 20px; /* Increased gap between line and "Home" button */
         }
 
         .navbar .nav-links {
             display: flex;
-            gap: 12px; /* Same distance between buttons */
+            gap: 15px; /* Same distance between buttons */
         }
 
         .navbar .nav-links a {
             color: white;
             text-decoration: none;
             font-size: 16px;
-            padding: 8px 15px;
+            padding: 8px 15px; /* Smaller buttons */
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
@@ -64,7 +64,6 @@
             background-color: #444;
         }
 
-        /* Date-Time Styles */
         .navbar .date-time {
             display: flex;
             align-items: center;
@@ -81,7 +80,7 @@
         h1 {
             font-size: 80px; /* Bigger logo */
             color: white;
-            margin-top: 100px;
+            margin-top: 40px; /* Reduced space between the title and bio */
         }
 
         .red-three {
@@ -90,7 +89,7 @@
 
         /* Bio Section */
         #bioText {
-            margin-top: 20px;
+            margin-top: 10px; /* Reduced margin to make it closer to the title */
             font-size: 18px;
             padding: 12px 25px;
             display: inline-block;
@@ -108,7 +107,7 @@
         .btn {
             padding: 12px 25px;
             font-size: 18px;
-            border: 2px solid #222;
+            border: 2px solid #222; /* Darker gray outline */
             background-color: transparent;
             color: white;
             cursor: pointer;
@@ -126,9 +125,9 @@
             position: absolute;
             bottom: 10px;
             left: 20px;
-            width: 120px;
+            width: 120px; /* Same width as "Apps" button */
             height: 40px;
-            opacity: 0;
+            opacity: 0; /* Invisible */
             cursor: pointer;
         }
 
@@ -137,7 +136,7 @@
             background: url('https://media.makeagif.com/media/2-23-2024/X_tUpu.gif') no-repeat center center fixed; 
             background-size: cover;
             min-height: 100vh;
-            padding-top: 50px;
+            padding-top: 50px; /* Spacing to not overlap with navbar */
         }
     </style>
 </head>
@@ -147,6 +146,9 @@
     <div class="navbar">
         <!-- Logo -->
         <div class="logo">r<span class="red-three">3</span></div>
+
+        <!-- Vertical Line between logo and Home -->
+        <div class="vertical-line"></div>
 
         <!-- Navigation Links -->
         <div class="nav-links">
