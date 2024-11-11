@@ -33,6 +33,8 @@
             font-size: 30px;
             color: white;
             font-weight: bold;
+            display: flex;
+            align-items: center;
         }
 
         .navbar .logo span {
@@ -67,7 +69,7 @@
             background-color: #444;
         }
 
-        /* Profile Circle */
+        /* Profile Circle (outside the navbar) */
         .profile-circle {
             width: 30px;
             height: 30px;
@@ -79,6 +81,8 @@
             background-position: center;
             position: absolute;
             right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         /* Date and Time */
@@ -86,6 +90,7 @@
             display: flex;
             align-items: center;
             gap: 10px; /* Small gap between date and time */
+            margin-right: 60px;  /* Space for profile circle */
         }
 
         /* Content Styles */
@@ -112,7 +117,7 @@
         .search-bar {
             margin-top: 20px;
             padding: 12px;
-            width: 300px;
+            width: 250px;
             border-radius: 5px;
             border: 2px solid #444;
             color: white;
@@ -121,7 +126,7 @@
         }
 
         .search-bar:hover {
-            width: 350px;
+            width: 300px;
         }
 
         /* Buttons Container */
