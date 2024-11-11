@@ -72,15 +72,15 @@
         }
 
         .date-time .circle {
-            width: 30px; /* Circle size set to 30px */
+            width: 30px;
             height: 30px;
-            border: 2px solid white; /* Hollow circle with white border */
+            border: 2px solid white;
             border-radius: 50%;
             margin-left: 10px;
         }
 
         .date-time .date {
-            margin-right: 15px; /* Add space between date and time */
+            margin-right: 15px;
         }
 
         /* Version Text */
@@ -115,7 +115,7 @@
         /* App Card */
         .app-card {
             width: 250px;
-            height: 180px;
+            height: 220px;
             background-color: #222;
             color: white;
             border: 2px solid #111;
@@ -152,6 +152,22 @@
             color: #ccc;
             margin-top: 5px;
         }
+
+        /* Launch Button */
+        .launch-button {
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .launch-button:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
@@ -168,7 +184,6 @@
         <div class="date-time">
             <div class="date" id="currentDate"></div>
             <div class="time" id="currentTime"></div>
-            <!-- Hollow Circle with 30px size -->
             <div class="circle"></div>
         </div>
     </div>
@@ -186,16 +201,19 @@
             <div class="icon-placeholder">Icon 1</div>
             <div class="app-name">App Name 1</div>
             <div class="app-description">Description for app 1.</div>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
         </div>
         <div class="app-card">
             <div class="icon-placeholder">Icon 2</div>
             <div class="app-name">App Name 2</div>
             <div class="app-description">Description for app 2.</div>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
         </div>
         <div class="app-card">
             <div class="icon-placeholder">Icon 3</div>
             <div class="app-name">App Name 3</div>
             <div class="app-description">Description for app 3.</div>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
         </div>
 
         <!-- Second Row -->
@@ -203,16 +221,19 @@
             <div class="icon-placeholder">Icon 4</div>
             <div class="app-name">App Name 4</div>
             <div class="app-description">Description for app 4.</div>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
         </div>
         <div class="app-card">
             <div class="icon-placeholder">Icon 5</div>
             <div class="app-name">App Name 5</div>
             <div class="app-description">Description for app 5.</div>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
         </div>
         <div class="app-card">
             <div class="icon-placeholder">Icon 6</div>
             <div class="app-name">App Name 6</div>
             <div class="app-description">Description for app 6.</div>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
         </div>
     </div>
 
