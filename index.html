@@ -20,6 +20,7 @@
         /* Navbar Styles */
         .navbar {
             display: flex;
+            justify-content: space-between;
             align-items: center;
             background-color: black;
             padding: 10px 20px;
@@ -81,7 +82,8 @@
             display: flex;
             align-items: center;
             gap: 10px; /* Small gap between date and time */
-            margin-right: 60px;  /* Space for profile circle */
+            position: absolute;
+            right: 60px; /* Position the date/time a bit to the left so it doesn't overlap with the profile circle */
         }
 
         /* Content Styles */
@@ -160,7 +162,7 @@
         <!-- Logo -->
         <div class="logo">r<span class="red-three">3</span></div>
 
-        <!-- Navigation Links (aligned to the left) -->
+        <!-- Navigation Links -->
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="games.html">Apps</a>
