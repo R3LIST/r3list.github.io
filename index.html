@@ -1,157 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>r3list</title>
-    <!-- Google Fonts link for Be Vietnam Pro -->
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* Basic Styles */
-        body {
-            background-color: black;
-            color: white;
-            font-family: 'Be Vietnam Pro', sans-serif; /* Updated font */
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+    /* Navbar styles unchanged */
 
-        /* Navbar Styles */
-        .navbar {
-            display: flex;
-            justify-content: flex-start; /* Align items to the left */
-            align-items: center;
-            background-color: black; /* Same as the body background */
-            padding: 10px 20px;
-            border-bottom: 2px solid #444; /* Thin line separating navbar from main content */
-        }
+    /* Position Version Text Below Navbar */
+    .version-text {
+        position: absolute;
+        top: 70px; /* Adjusted to be just below the navbar */
+        right: 20px;
+        font-size: 18px;
+        color: #ffffff;
+        background-color: rgba(255, 0, 0, 0.3); /* Light red background */
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
 
-        .navbar .logo {
-            font-size: 30px;
-            color: white;
-            font-weight: bold;
-        }
+    /* Adjust Spacing Between Logo and Bio */
+    h1 {
+        font-size: 80px; 
+        color: white;
+        margin-top: 20px; /* Reduced space between navbar and title */
+        margin-bottom: 10px; /* Reduced space between title and bio */
+    }
 
-        .navbar .logo span {
-            color: red; /* Red 3 */
-        }
+    #bioText {
+        margin-top: 5px; /* Reduced margin to make it closer to the title */
+        font-size: 18px;
+        padding: 12px 25px;
+        display: inline-block;
+        color: white;
+    }
+</style>
 
-        /* Small vertical line */
-        .vertical-line {
-            height: 20px; /* Adjusted to be around the height of the "H" */
-            width: 2px; /* Thin line */
-            background-color: #222; /* Same as the button outlines */
-            margin-left: 20px; /* Increased gap between logo and line */
-            margin-right: 20px; /* Increased gap between line and "Home" button */
-        }
-
-        .navbar .nav-links {
-            display: flex;
-            gap: 15px; /* Same distance between buttons */
-        }
-
-        .navbar .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            padding: 8px 15px; /* Smaller buttons */
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .navbar .nav-links a:hover {
-            background-color: #444;
-        }
-
-        .navbar .date-time {
-            display: flex;
-            align-items: center;
-            font-size: 18px;
-            color: white;
-            margin-left: auto; /* Push to the far right */
-        }
-
-        .navbar .date-time .date, .navbar .date-time .time {
-            margin-left: 10px;
-        }
-
-        /* Content Styles */
-        h1 {
-            font-size: 80px; /* Bigger logo */
-            color: white;
-            margin-top: 40px; /* Reduced space between the title and bio */
-        }
-
-        .red-three {
-            color: red;
-        }
-
-        /* Bio Section */
-        #bioText {
-            margin-top: 10px; /* Reduced margin to make it closer to the title */
-            font-size: 18px;
-            padding: 12px 25px;
-            display: inline-block;
-            color: white;
-        }
-
-        /* Buttons */
-        .btn-container {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .btn {
-            padding: 12px 25px;
-            font-size: 18px;
-            border: 2px solid #222; /* Darker gray outline */
-            background-color: transparent;
-            color: white;
-            cursor: pointer;
-            display: inline-block;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #444;
-        }
-
-        /* Invisible Button */
-        .secret-button {
-            position: absolute;
-            bottom: 10px;
-            left: 20px;
-            width: 120px; /* Same width as "Apps" button */
-            height: 40px;
-            opacity: 0; /* Invisible */
-            cursor: pointer;
-        }
-
-        /* Main Content Background */
-        .main-content {
-            background: url('https://media.makeagif.com/media/2-23-2024/X_tUpu.gif') no-repeat center center fixed; 
-            background-size: cover;
-            min-height: 100vh;
-            padding-top: 50px; /* Spacing to not overlap with navbar */
-        }
-
-        /* Version Text in top-right corner below navbar */
-        .version-text {
-            position: absolute;
-            top: 50px; /* Just below the navbar */
-            right: 20px;
-            font-size: 18px; /* Same size as the bio text */
-            color: white;
-            font-weight: normal;
-        }
-    </style>
-</head>
 <body>
-
     <!-- Navbar -->
     <div class="navbar">
         <!-- Logo -->
@@ -164,7 +44,7 @@
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="games.html">Apps</a>
-            <a href="#">Settings</a> <!-- Replaced Old r3list with Settings -->
+            <a href="#">Settings</a>
         </div>
 
         <!-- Date/Time -->
@@ -173,6 +53,9 @@
             <div class="time" id="currentTime"></div>
         </div>
     </div>
+
+    <!-- Version Text positioned right below the navbar -->
+    <div class="version-text">v6</div>
 
     <!-- Main Content Section -->
     <div class="main-content">
@@ -184,60 +67,8 @@
 
         <!-- Buttons below the bio -->
         <div class="btn-container">
-            <button class="btn" onclick="window.location.href='#'">Settings</button> <!-- Replaced Old r3list with Settings -->
+            <button class="btn" onclick="window.location.href='#'">Settings</button>
             <button class="btn" onclick="window.location.href='games.html'">Apps</button>
         </div>
-
-        <!-- Invisible Button for Secret Notification -->
-        <div class="secret-button" onclick="alert('(1/2)');"></div>
     </div>
-
-    <!-- Version Text in top-right corner below navbar -->
-    <div class="version-text">v5</div>
-
-    <script>
-        // Array of 10 new bio texts
-        const bioTexts = [
-            "v6 soon, maybe",
-            `happy ${new Date().toLocaleString('default', { month: 'long' })}`,
-            "August 12th, 2036",
-            "check out the old r3list, whenever",
-            "Hello, World!",
-            "more stuff soon",
-            "better than the old r3list",
-            "BSL_r3list-S-EDI",
-            "32x32 image format",
-            "html is very easy to learn"
-        ];
-
-        // Function to change bio text to a random entry when the page is loaded
-        function changeBio() {
-            const randomIndex = Math.floor(Math.random() * bioTexts.length);
-            document.getElementById("bioText").innerText = bioTexts[randomIndex];
-        }
-
-        // Call the function to change bio text on page load
-        changeBio();
-
-        // Function to update the current date and time
-        function updateDateTime() {
-            const date = new Date();
-            
-            // Current Date in MM/DD/YYYY format
-            const currentDate = date.toLocaleDateString('en-US');
-
-            // Current Time in 12-hour format with AM/PM
-            const currentTime = date.toLocaleTimeString('en-US', { hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit' });
-
-            // Update date and time on the page
-            document.getElementById("currentDate").textContent = currentDate;
-            document.getElementById("currentTime").textContent = currentTime;
-        }
-
-        // Update the date and time every second
-        setInterval(updateDateTime, 1000);
-        updateDateTime();  // Initialize the date and time when the page loads
-    </script>
-
 </body>
-</html>
