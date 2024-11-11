@@ -62,24 +62,34 @@
             background-color: #444;
         }
 
+        /* Date/Time and Circle Styling */
         .navbar .date-time {
             display: flex;
             align-items: center;
             font-size: 18px;
             color: white;
             margin-left: auto;
+            margin-right: 20px; /* Added margin for space on the right */
         }
 
         .navbar .date-time .date, .navbar .date-time .time {
             margin-left: 10px;
         }
 
+        .navbar .date-time .circle {
+            width: 10px;
+            height: 10px;
+            border: 2px solid white;
+            border-radius: 50%;
+            margin-left: 10px; /* Space between time and circle */
+        }
+
         /* Page Title */
         h1 {
             font-size: 80px;
             color: white;
-            margin-top: 20px; /* Reduced space between navbar and title */
-            margin-bottom: 10px; /* Reduced space between title and bio */
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
 
         .red-three {
@@ -138,10 +148,10 @@
             padding-top: 50px;
         }
 
-        /* Version Text in top-right corner below navbar */
+        /* Version Text */
         .version-text {
             position: absolute;
-            top: 70px; /* Just below the navbar */
+            top: 70px;
             right: 20px;
             font-size: 18px;
             color: white;
@@ -160,16 +170,16 @@
         <div class="vertical-line"></div>
         <div class="nav-links">
             <a href="#">Home</a>
-            <a href="games.html">Apps</a>
             <a href="#">Settings</a>
         </div>
         <div class="date-time">
             <div class="date" id="currentDate"></div>
             <div class="time" id="currentTime"></div>
+            <div class="circle"></div> <!-- Small circle with white outline -->
         </div>
     </div>
 
-    <!-- Version Text positioned right below the navbar -->
+    <!-- Version Text -->
     <div class="version-text">v6</div>
 
     <!-- Main Content Section -->
@@ -177,8 +187,8 @@
         <h1>r<span class="red-three">3</span>list</h1>
         <p id="bioText"></p>
         <div class="btn-container">
+            <button class="btn" onclick="openInAboutBlank('https://example.com')">about:blank</button> <!-- Updated button to open in about:blank -->
             <button class="btn" onclick="window.location.href='#'">Settings</button>
-            <button class="btn" onclick="window.location.href='games.html'">Apps</button>
         </div>
         <div class="secret-button" onclick="alert('(1/2)');"></div>
     </div>
@@ -215,6 +225,12 @@
 
         setInterval(updateDateTime, 1000);
         updateDateTime();
+
+        // Function to open the link in an about:blank window
+        function openInAboutBlank(url) {
+            const newWindow = window.open();
+            newWindow.document.write(`<iframe src="${url}" width="100%" height="100%" style="border:0;"></iframe>`);
+        }
     </script>
 
 </body>
