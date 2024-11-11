@@ -23,7 +23,7 @@
             align-items: center;
             background-color: black;
             padding: 10px 20px;
-            border-bottom: 2px solid #444;
+            border-bottom: 2px solid #222; /* Darker line */
         }
 
         .navbar .logo {
@@ -39,7 +39,7 @@
         .vertical-line {
             height: 20px;
             width: 2px;
-            background-color: #222;
+            background-color: #111; /* Darker vertical line */
             margin-left: 20px;
             margin-right: 20px;
         }
@@ -69,7 +69,7 @@
             font-size: 18px;
             color: white;
             margin-left: auto;
-            margin-right: 20px; /* Added margin for space on the right */
+            margin-right: 20px;
         }
 
         .navbar .date-time .date, .navbar .date-time .time {
@@ -77,11 +77,11 @@
         }
 
         .navbar .date-time .circle {
-            width: 10px;
-            height: 10px;
+            width: 15px; /* Increased size */
+            height: 15px; /* Increased size */
             border: 2px solid white;
             border-radius: 50%;
-            margin-left: 10px; /* Space between time and circle */
+            margin-left: 10px;
         }
 
         /* Page Title */
@@ -116,7 +116,8 @@
         .btn {
             padding: 12px 25px;
             font-size: 18px;
-            border: 2px solid #222;
+            font-family: 'Be Vietnam Pro', sans-serif; /* Cleaner font style */
+            border: 2px solid #111; /* Darker outline */
             background-color: transparent;
             color: white;
             cursor: pointer;
@@ -170,12 +171,13 @@
         <div class="vertical-line"></div>
         <div class="nav-links">
             <a href="#">Home</a>
+            <a href="games.html">Apps</a>
             <a href="#">Settings</a>
         </div>
         <div class="date-time">
             <div class="date" id="currentDate"></div>
             <div class="time" id="currentTime"></div>
-            <div class="circle"></div> <!-- Small circle with white outline -->
+            <div class="circle"></div> <!-- Larger circle with white outline -->
         </div>
     </div>
 
@@ -187,8 +189,8 @@
         <h1>r<span class="red-three">3</span>list</h1>
         <p id="bioText"></p>
         <div class="btn-container">
-            <button class="btn" onclick="openInAboutBlank('https://example.com')">about:blank</button> <!-- Updated button to open in about:blank -->
             <button class="btn" onclick="window.location.href='#'">Settings</button>
+            <button class="btn" onclick="window.location.href='games.html'">Apps</button>
         </div>
         <div class="secret-button" onclick="alert('(1/2)');"></div>
     </div>
@@ -225,12 +227,6 @@
 
         setInterval(updateDateTime, 1000);
         updateDateTime();
-
-        // Function to open the link in an about:blank window
-        function openInAboutBlank(url) {
-            const newWindow = window.open();
-            newWindow.document.write(`<iframe src="${url}" width="100%" height="100%" style="border:0;"></iframe>`);
-        }
     </script>
 
 </body>
