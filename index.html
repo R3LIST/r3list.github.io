@@ -20,11 +20,12 @@
         /* Navbar Styles */
         .navbar {
             display: flex;
-            justify-content: space-between; /* Space out items */
+            justify-content: space-between;
             align-items: center;
-            background-color: black; /* Same as the body background */
+            background-color: black;
             padding: 10px 20px;
-            border-bottom: 2px solid #444; /* Thin line separating navbar from main content */
+            border-bottom: 2px solid #444;
+            position: relative;
         }
 
         .navbar .logo {
@@ -34,28 +35,28 @@
         }
 
         .navbar .logo span {
-            color: red; /* Red 3 */
+            color: red;
         }
 
-        /* Small vertical line */
+        /* Vertical Line Between Logo and Navigation Links */
         .vertical-line {
-            height: 20px; /* Adjusted to be around the height of the "H" */
-            width: 2px; /* Thin line */
-            background-color: #222; /* Same as the button outlines */
-            margin-left: 10px; /* Small gap between logo and line */
-            margin-right: 10px; /* Small gap between line and "Home" button */
+            height: 20px;
+            width: 2px;
+            background-color: #222;
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
         .navbar .nav-links {
             display: flex;
-            gap: 15px; /* Same distance between buttons */
+            gap: 15px;
         }
 
         .navbar .nav-links a {
             color: white;
             text-decoration: none;
             font-size: 16px;
-            padding: 8px 15px; /* Smaller buttons */
+            padding: 8px 15px;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
@@ -64,19 +65,7 @@
             background-color: #444;
         }
 
-        .navbar .date-time {
-            display: flex;
-            align-items: center;
-            font-size: 18px;
-            color: white;
-            margin-left: auto; /* Push to the far right */
-        }
-
-        .navbar .date-time .date, .navbar .date-time .time {
-            margin-left: 10px;
-        }
-
-        /* Circle with profile image in the navbar */
+        /* Profile Circle - Moved to the right side */
         .profile-circle {
             width: 30px;
             height: 30px;
@@ -92,9 +81,9 @@
 
         /* Content Styles */
         h1 {
-            font-size: 60px; /* Slightly smaller logo */
+            font-size: 60px;
             color: white;
-            margin-top: 50px; /* Reduced spacing */
+            margin-top: 30px; /* Reduced top margin to bring it closer to the bio */
         }
 
         .red-three {
@@ -103,14 +92,30 @@
 
         /* Bio Section */
         #bioText {
-            margin-top: 10px;
+            margin-top: 5px;
             font-size: 18px;
             padding: 12px 25px;
             display: inline-block;
             color: white;
         }
 
-        /* Buttons */
+        /* Search Bar Styles */
+        .search-bar {
+            margin-top: 20px;
+            padding: 12px;
+            width: 80%;
+            border-radius: 5px;
+            border: 2px solid #444;
+            color: white;
+            background-color: transparent;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .search-bar:hover {
+            width: 90%; /* Expands width when hovered */
+        }
+
+        /* Buttons Container */
         .btn-container {
             margin-top: 30px;
             display: flex;
@@ -134,23 +139,12 @@
             background-color: #444;
         }
 
-        /* Invisible Button */
-        .secret-button {
-            position: absolute;
-            bottom: 10px;
-            left: 20px;
-            width: 120px; /* Same width as "Apps" button */
-            height: 40px;
-            opacity: 0; /* Invisible */
-            cursor: pointer;
-        }
-
         /* Main Content Background */
         .main-content {
-            background: url('https://media.makeagif.com/media/2-23-2024/X_tUpu.gif') no-repeat center center fixed; 
+            background: url('https://media.makeagif.com/media/2-23-2024/X_tUpu.gif') no-repeat center center fixed;
             background-size: cover;
             min-height: 100vh;
-            padding-top: 50px; /* Spacing to not overlap with navbar */
+            padding-top: 50px;
         }
     </style>
 </head>
@@ -171,15 +165,15 @@
             <a href="https://project-r3list.webflow.io/" target="_blank">Old r3list</a>
         </div>
 
+        <!-- Profile Circle in Navbar -->
+        <div class="profile-circle"></div>
+
         <!-- Date/Time -->
         <div class="date-time">
             <div class="date" id="currentDate"></div>
             <div class="time" id="currentTime"></div>
         </div>
     </div>
-
-    <!-- Profile Circle in Navbar -->
-    <div class="profile-circle"></div>
 
     <!-- Main Content Section -->
     <div class="main-content">
@@ -188,16 +182,15 @@
 
         <!-- Bio Section -->
         <p id="bioText"></p>
-        <p>I'm here!</p>
+
+        <!-- Search Bar -->
+        <input class="search-bar" type="text" placeholder="Search for websites...">
 
         <!-- Buttons below the bio -->
         <div class="btn-container">
             <button class="btn" onclick="window.location.href='https://project-r3list.webflow.io/'">Old r3list</button>
             <button class="btn" onclick="window.location.href='games.html'">Apps</button>
         </div>
-
-        <!-- Invisible Button for Secret Notification -->
-        <div class="secret-button" onclick="alert('(1/2)');"></div>
     </div>
 
     <script>
@@ -246,4 +239,3 @@
 
 </body>
 </html>
-
