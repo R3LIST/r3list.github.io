@@ -11,7 +11,7 @@
         body {
             background-color: black;
             color: white;
-            font-family: 'Be Vietnam Pro', sans-serif;
+            font-family: 'Be Vietnam Pro', sans-serif; /* Updated font */
             text-align: center;
             margin: 0;
             padding: 0;
@@ -20,37 +20,42 @@
         /* Navbar Styles */
         .navbar {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start; /* Align items to the left */
             align-items: center;
-            background-color: black;
+            background-color: black; /* Same as the body background */
             padding: 10px 20px;
-            border-bottom: 2px solid #444;
+            border-bottom: 2px solid #444; /* Thin line separating navbar from main content */
         }
 
-        /* Left side of the navbar */
         .navbar .logo {
             font-size: 30px;
             color: white;
             font-weight: bold;
-            display: flex;
-            align-items: center;
         }
 
         .navbar .logo span {
-            color: red;
+            color: red; /* Red 3 */
+        }
+
+        /* Small vertical line */
+        .vertical-line {
+            height: 20px; /* Adjusted to be around the height of the "H" */
+            width: 2px; /* Thin line */
+            background-color: #222; /* Same as the button outlines */
+            margin-left: 10px; /* Small gap between logo and line */
+            margin-right: 10px; /* Small gap between line and "Home" button */
         }
 
         .navbar .nav-links {
             display: flex;
-            gap: 15px;
-            margin-left: 20px; /* Adjust this to bring buttons closer to "r3" */
+            gap: 15px; /* Same distance between buttons */
         }
 
         .navbar .nav-links a {
             color: white;
             text-decoration: none;
             font-size: 16px;
-            padding: 8px 15px;
+            padding: 8px 15px; /* Smaller buttons */
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
@@ -59,15 +64,19 @@
             background-color: #444;
         }
 
-        /* Date, Time, and Profile Circle (far right) */
-        .right-side {
+        .navbar .date-time {
             display: flex;
             align-items: center;
-            gap: 15px;
-            margin-left: 30px; /* Space between the two groups */
+            font-size: 18px;
+            color: white;
+            margin-left: auto; /* Push to the far right */
         }
 
-        /* Profile Circle (outside the navbar on the far right) */
+        .navbar .date-time .date, .navbar .date-time .time {
+            margin-left: 10px;
+        }
+
+        /* Circle with profile image outside the navbar */
         .profile-circle {
             width: 30px;
             height: 30px;
@@ -77,20 +86,16 @@
             background-image: url('https://static.vecteezy.com/system/resources/thumbnails/030/504/836/small/avatar-account-flat-isolated-on-transparent-background-for-graphic-and-web-design-default-social-media-profile-photo-symbol-profile-and-people-silhouette-user-icon-vector.jpg');
             background-size: cover;
             background-position: center;
-        }
-
-        /* Date and Time */
-        .date-time-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
         }
 
         /* Content Styles */
         h1 {
-            font-size: 60px;
+            font-size: 80px; /* Bigger logo */
             color: white;
-            margin-top: 30px;
+            margin-top: 100px;
         }
 
         .red-three {
@@ -99,14 +104,14 @@
 
         /* Bio Section */
         #bioText {
-            margin-top: 5px;
+            margin-top: 20px;
             font-size: 18px;
             padding: 12px 25px;
             display: inline-block;
             color: white;
         }
 
-        /* Buttons Container */
+        /* Buttons */
         .btn-container {
             margin-top: 30px;
             display: flex;
@@ -117,7 +122,7 @@
         .btn {
             padding: 12px 25px;
             font-size: 18px;
-            border: 2px solid #222; 
+            border: 2px solid #222; /* Darker gray outline */
             background-color: transparent;
             color: white;
             cursor: pointer;
@@ -130,12 +135,23 @@
             background-color: #444;
         }
 
+        /* Invisible Button */
+        .secret-button {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            width: 120px; /* Same width as "Apps" button */
+            height: 40px;
+            opacity: 0; /* Invisible */
+            cursor: pointer;
+        }
+
         /* Main Content Background */
         .main-content {
-            background: url('https://media.makeagif.com/media/2-23-2024/X_tUpu.gif') no-repeat center center fixed;
+            background: url('https://media.makeagif.com/media/2-23-2024/X_tUpu.gif') no-repeat center center fixed; 
             background-size: cover;
             min-height: 100vh;
-            padding-top: 50px;
+            padding-top: 50px; /* Spacing to not overlap with navbar */
         }
     </style>
 </head>
@@ -143,25 +159,28 @@
 
     <!-- Navbar -->
     <div class="navbar">
-        <!-- Left Side: Logo and Buttons -->
+        <!-- Logo -->
         <div class="logo">r<span class="red-three">3</span></div>
+
+        <!-- Vertical Line between logo and Home -->
+        <div class="vertical-line"></div>
+
+        <!-- Navigation Links -->
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="games.html">Apps</a>
-            <a href="#">Settings</a>
+            <a href="https://project-r3list.webflow.io/" target="_blank">Old r3list</a>
         </div>
 
-        <!-- Right Side: Date, Time, Profile Circle -->
-        <div class="right-side">
-            <!-- Date and Time -->
-            <div class="date-time-container">
-                <div class="date" id="currentDate"></div>
-                <div class="time" id="currentTime"></div>
-            </div>
-            <!-- Profile Circle -->
-            <div class="profile-circle"></div>
+        <!-- Date/Time -->
+        <div class="date-time">
+            <div class="date" id="currentDate"></div>
+            <div class="time" id="currentTime"></div>
         </div>
     </div>
+
+    <!-- Profile Circle outside of Navbar -->
+    <div class="profile-circle"></div>
 
     <!-- Main Content Section -->
     <div class="main-content">
@@ -170,12 +189,16 @@
 
         <!-- Bio Section -->
         <p id="bioText"></p>
+        <p>I'm here!</p>
 
         <!-- Buttons below the bio -->
         <div class="btn-container">
             <button class="btn" onclick="window.location.href='https://project-r3list.webflow.io/'">Old r3list</button>
             <button class="btn" onclick="window.location.href='games.html'">Apps</button>
         </div>
+
+        <!-- Invisible Button for Secret Notification -->
+        <div class="secret-button" onclick="alert('(1/2)');"></div>
     </div>
 
     <script>
