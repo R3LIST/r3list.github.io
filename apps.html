@@ -6,120 +6,124 @@
     <title>Apps</title>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* Navbar Styles */
         body {
             background-color: black;
             color: white;
             font-family: 'Be Vietnam Pro', sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
-        }
-
-        /* Navbar styles */
-        .navbar {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            background-color: black;
-            padding: 10px 20px;
-            border-bottom: 2px solid #222;
-        }
-
-        .navbar .logo {
-            font-size: 30px;
-            color: white;
-            font-weight: bold;
-        }
-
-        .navbar .logo span {
-            color: red;
-        }
-
-        /* App Cards Layout */
-        .app-cards-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
+            text-align: center;
         }
 
         /* App Card Styles */
         .app-card {
             background-color: #222;
-            border-radius: 15px;
+            border-radius: 10px;
+            margin: 15px;
             padding: 20px;
             width: 250px;
+            text-align: center;
+            color: white;
             position: relative;
-            text-align: left;
         }
 
         .app-card img {
-            position: absolute;
-            top: -30px;
-            left: 10px;
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             border-radius: 10px;
-            border: 2px solid #444;
             object-fit: cover;
+            position: relative;
+            top: -40px;
         }
 
-        .app-card h3 {
-            margin-left: 80px;
-            font-size: 20px;
-            color: white;
-        }
-
-        .app-card p {
-            margin-left: 80px;
-            color: #ddd;
+        .app-card .description {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #ccc;
         }
 
         .app-card .launch-button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: black;
+            background-color: #444;
+            border: none;
             color: white;
-            border: 2px solid #444;
+            padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 15px;
             font-size: 16px;
             transition: background-color 0.3s ease;
-            text-align: center;
         }
 
         .app-card .launch-button:hover {
-            background-color: #444;
+            background-color: #666;
+        }
+
+        /* Flexbox for arranging app cards in rows */
+        .app-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            color: white;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="logo">r<span class="red-three">3</span></div>
-    </div>
-
     <!-- Apps Title -->
     <h1>Apps</h1>
 
-    <!-- App Cards Container -->
-    <div class="app-cards-container">
-        <!-- CS:GO Clicker App Card -->
+    <!-- App Cards Section -->
+    <div class="app-row">
+        <!-- App Card 1: CS:GO Clicker -->
         <div class="app-card">
-            <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="CSGO Icon">
+            <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="CS:GO Clicker">
             <h3>CS:GO Clicker</h3>
-            <p>Play CS:GO Clicker</p>
-            <div class="launch-button" onclick="window.location.href='csgoclicker.html'">Launch</div>
+            <p class="description">Play CS:GO Clicker</p>
+            <button class="launch-button" onclick="window.location.href='csgoclicker.html'">Launch</button>
         </div>
 
-        <!-- The Password Game App Card -->
+        <!-- App Card 2: The Password Game -->
         <div class="app-card">
-            <img src="https://thepasswordgame.io/data/image/options/thepasswordgame-banner.jpg" alt="Password Game Icon">
+            <img src="https://thepasswordgame.io/data/image/options/thepasswordgame-banner.jpg" alt="The Password Game">
             <h3>The Password Game</h3>
-            <p>Play the difficult and infamous Password Game</p>
-            <div class="launch-button" onclick="window.location.href='passwordgame.html'">Launch</div>
+            <p class="description">Play the difficult and infamous Password Game</p>
+            <button class="launch-button" onclick="window.location.href='passwordgame.html'">Launch</button>
+        </div>
+
+        <!-- Additional Placeholder App Cards -->
+        <div class="app-card">
+            <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="Icon">
+            <h3>App Name 3</h3>
+            <p class="description">Description of App 3</p>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
+        </div>
+    </div>
+
+    <div class="app-row">
+        <div class="app-card">
+            <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="Icon">
+            <h3>App Name 4</h3>
+            <p class="description">Description of App 4</p>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
+        </div>
+
+        <div class="app-card">
+            <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="Icon">
+            <h3>App Name 5</h3>
+            <p class="description">Description of App 5</p>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
+        </div>
+
+        <div class="app-card">
+            <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="Icon">
+            <h3>App Name 6</h3>
+            <p class="description">Description of App 6</p>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
         </div>
     </div>
 
