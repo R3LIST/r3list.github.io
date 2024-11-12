@@ -6,15 +6,7 @@
     <title>Apps</title>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Navbar Styles */
-        body {
-            background-color: black;
-            color: white;
-            font-family: 'Be Vietnam Pro', sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+        /* Add your existing styles here */
 
         /* App Card Styles */
         .app-card {
@@ -34,7 +26,7 @@
             border-radius: 10px;
             object-fit: cover;
             position: relative;
-            top: -40px;
+            top: -40px; /* Push the image outside of the rectangle */
         }
 
         .app-card .description {
@@ -66,16 +58,17 @@
             flex-wrap: wrap;
         }
 
-        h1 {
-            color: white;
-            margin-top: 50px;
+        .app-row .app-card {
+            margin: 10px;
         }
     </style>
 </head>
 <body>
 
+    <!-- Navbar (copy your existing navbar here) -->
+
     <!-- Apps Title -->
-    <h1>Apps</h1>
+    <h1 style="text-align: center; color: white; margin-top: 50px;">Apps</h1>
 
     <!-- App Cards Section -->
     <div class="app-row">
@@ -87,15 +80,15 @@
             <button class="launch-button" onclick="window.location.href='csgoclicker.html'">Launch</button>
         </div>
 
-        <!-- App Card 2: The Password Game -->
+        <!-- App Card 2 (Duplicate for App Card 2) -->
         <div class="app-card">
-            <img src="https://thepasswordgame.io/data/image/options/thepasswordgame-banner.jpg" alt="The Password Game">
-            <h3>The Password Game</h3>
-            <p class="description">Play the difficult and infamous Password Game</p>
-            <button class="launch-button" onclick="window.location.href='passwordgame.html'">Launch</button>
+            <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="Icon">
+            <h3>App Name 2</h3>
+            <p class="description">Description of App 2</p>
+            <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
         </div>
 
-        <!-- Additional Placeholder App Cards -->
+        <!-- App Card 3 (Duplicate for App Card 3) -->
         <div class="app-card">
             <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="Icon">
             <h3>App Name 3</h3>
@@ -105,6 +98,7 @@
     </div>
 
     <div class="app-row">
+        <!-- App Card 4 (Duplicate for App Card 4) -->
         <div class="app-card">
             <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="Icon">
             <h3>App Name 4</h3>
@@ -112,6 +106,7 @@
             <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
         </div>
 
+        <!-- App Card 5 (Duplicate for App Card 5) -->
         <div class="app-card">
             <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="Icon">
             <h3>App Name 5</h3>
@@ -119,6 +114,7 @@
             <button class="launch-button" onclick="window.location.href='base.html'">Launch</button>
         </div>
 
+        <!-- App Card 6 (Duplicate for App Card 6) -->
         <div class="app-card">
             <img src="https://avatars.githubusercontent.com/u/39322951?s=280&v=4" alt="Icon">
             <h3>App Name 6</h3>
