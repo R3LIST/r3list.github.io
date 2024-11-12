@@ -3,45 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neal.fun</title>
+    <title>Neal Fun</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             background-color: #000;
         }
 
-        /* Link to open the site in a new tab */
-        .link-container {
-            text-align: center;
-        }
-
-        .launch-button {
-            background-color: #444;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            font-size: 18px;
-            cursor: pointer;
+        iframe {
+            width: 100%;
+            height: 100vh;
             border: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .launch-button:hover {
-            background-color: #666;
         }
     </style>
 </head>
 <body>
 
-    <!-- Link to open the site in a new tab -->
-    <div class="link-container">
-        <button class="launch-button" onclick="window.location.href='https://neal.fun'">Go to Neal.fun</button>
-    </div>
+    <!-- Embedding neal.fun in an iframe -->
+    <iframe src="https://neal.fun" title="Neal Fun"></iframe>
 
 </body>
 </html>
