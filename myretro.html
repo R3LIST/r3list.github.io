@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Retro Games</title>
+    <style>
+        /* Set the page and iframe to take up full screen */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #222;
+        }
+
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+        }
+
+        /* Fallback link */
+        .link-fallback {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .link-fallback a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 10px 20px;
+            background-color: #444;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .link-fallback a:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe src="https://theooofficial.github.io/myRETROGAMES/" onerror="document.querySelector('.link-fallback').style.display = 'block';"></iframe>
+
+    <div class="link-fallback">
+        <p>Unable to display the content directly. Click below to open it in a new tab:</p>
+        <a href="https://theooofficial.github.io/myRETROGAMES/" target="_blank">Open My Retro Games</a>
+    </div>
+
+</body>
+</html>
