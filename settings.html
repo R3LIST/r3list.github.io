@@ -95,6 +95,46 @@
             border-radius: 5px;
             font-weight: bold;
         }
+
+        /* App Card Styling */
+        .app-card {
+            background-color: #222;
+            border: 2px solid #444;
+            border-radius: 10px;
+            width: 250px;
+            padding: 20px;
+            margin: 20px auto;
+            color: white;
+            text-align: center;
+        }
+
+        .app-card button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #444;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .app-card button:hover {
+            background-color: #666;
+        }
+
+        /* Iframe Styling */
+        #cloakFrame {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            z-index: 1000;
+            background-color: white;
+        }
     </style>
 </head>
 <body>
@@ -121,6 +161,15 @@
     <!-- Main Content Section -->
     <h1>Settings Page</h1>
 
+    <!-- App Card -->
+    <div class="app-card">
+        <h2>App</h2>
+        <button onclick="cloakSite()">about:blank</button>
+    </div>
+
+    <!-- Cloaking Iframe -->
+    <iframe id="cloakFrame" src="https://r3list.github.io/r"></iframe>
+
     <script>
         function updateDateTime() {
             const date = new Date();
@@ -129,6 +178,10 @@
 
             document.getElementById("currentDate").textContent = currentDate;
             document.getElementById("currentTime").textContent = currentTime;
+        }
+
+        function cloakSite() {
+            document.getElementById("cloakFrame").style.display = "block";
         }
 
         setInterval(updateDateTime, 1000);
