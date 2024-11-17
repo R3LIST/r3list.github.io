@@ -77,21 +77,12 @@
         }
 
         .navbar .date-time .circle {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             border: 2px solid white;
             border-radius: 50%;
             margin-left: 10px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .navbar .date-time .circle img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            overflow: hidden; /* Ensures the image stays within the circle */
         }
 
         .version-text {
@@ -159,7 +150,7 @@
             <div class="date" id="currentDate"></div>
             <div class="time" id="currentTime"></div>
             <div class="circle">
-                <img src="your-image.png" alt="User Image">
+                <img src="image.png" alt="Circle Image" style="width: 100%; height: 100%; border-radius: 50%;">
             </div>
         </div>
     </div>
@@ -168,11 +159,11 @@
     <div class="version-text">v7</div>
 
     <!-- Main Content Section -->
-    <h1>Its quiet here.</h1>
+    <h1>Update Log</h1>
 
     <!-- Update Log Section -->
     <div class="update-log">
-        <h2>Update Log</h2>
+        <h2></h2>
         <div class="update">
             <h3>Update</h3>
             <ul>
