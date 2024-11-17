@@ -77,12 +77,21 @@
         }
 
         .navbar .date-time .circle {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             border: 2px solid white;
             border-radius: 50%;
             margin-left: 10px;
-            overflow: hidden; /* Ensures the image stays within the circle */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar .date-time .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .version-text {
@@ -150,7 +159,7 @@
             <div class="date" id="currentDate"></div>
             <div class="time" id="currentTime"></div>
             <div class="circle">
-                <img src="image.png" alt="Circle Image" style="width: 100%; height: 100%; border-radius: 50%;">
+                <img src="your-image.png" alt="User Image">
             </div>
         </div>
     </div>
