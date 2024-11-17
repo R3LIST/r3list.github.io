@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - r3list</title>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://daks2k3a4ib2z.cloudfront.net/660f5a896a23cf2d2fd3d876/6730142da117b2eb837feb86_Screen_Shot_2024-11-09_at_9.00.14_PM-removebg-preview%20(1).png" type="image/png">
+    <style>
+        /* Basic Styles */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: black;
+            padding: 10px 20px;
+            border-bottom: 2px solid #222;
+        }
+
+        .navbar .logo {
+            font-size: 30px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar .logo span {
+            color: red;
+        }
+
+        .vertical-line {
+            height: 20px;
+            width: 2px;
+            background-color: #111;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar .nav-links a:hover {
+            background-color: #444;
+        }
+
+        .navbar .date-time {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            color: white;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .navbar .date-time .date, .navbar .date-time .time {
+            margin-left: 10px;
+        }
+
+        .navbar .date-time .circle {
+            width: 30px;
+            height: 30px;
+            border: 2px solid white;
+            border-radius: 50%;
+            margin-left: 10px;
+            overflow: hidden; /* Ensures the image stays within the circle */
+        }
+
+        .version-text {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            font-size: 18px;
+            color: white;
+            background-color: rgba(255, 0, 0, 0.3);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Update Log Section */
+        .update-log {
+            margin: 40px auto;
+            max-width: 600px;
+            background-color: #222;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .update-log h2 {
+            font-size: 24px;
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .update-log .update {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .update-log .update h3 {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .update-log .update ul {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+
+        .update-log .update ul li {
+            font-size: 16px;
+            color: lightgray;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">r<span class="red-three">3</span></div>
+        <div class="vertical-line"></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="apps.html">Apps</a>
+            <a href="settings.html">Settings</a>
+        </div>
+        <div class="date-time">
+            <div class="date" id="currentDate"></div>
+            <div class="time" id="currentTime"></div>
+            <div class="circle">
+                <img src="image.png" alt="Circle Image" style="width: 100%; height: 100%; border-radius: 50%;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Version Text -->
+    <div class="version-text">v7</div>
+
+    <!-- Main Content Section -->
+    <h1>Its quiet here.</h1>
+
+    <!-- Update Log Section -->
+    <div class="update-log">
+        <h2>Update Log</h2>
+        <div class="update">
+            <h3>Update</h3>
+            <ul>
+                <li>Change</li>
+                <li>Change</li>
+                <li>Change</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function updateDateTime() {
+            const date = new Date();
+            const currentDate = date.toLocaleDateString('en-US');
+            const currentTime = date.toLocaleTimeString('en-US', { hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+            document.getElementById("currentDate").textContent = currentDate;
+            document.getElementById("currentTime").textContent = currentTime;
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+</body>
+</html>
