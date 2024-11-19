@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goodbye, GoGuardian!</title>
-    
+    <title>Kryos OS</title>
     <!-- External Libraries -->
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
@@ -12,24 +10,14 @@
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
-    <!-- Icons and Fonts -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://rainestorme.github.io/GoodbyeGoGuardian/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://rainestorme.github.io/GoodbyeGoGuardian/favicon-32x32.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    
-    <!-- Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <!-- Styles -->
     <style>
         body {
+            background-color: black; /* Main background */
+            color: white; /* Default text color */
             font-family: 'Roboto', sans-serif;
-            background-color: black; /* Set the background color to black */
-            color: white; /* Set text color to white for better visibility */
         }
         .btn-primary {
             background-color: red !important; /* Change blue buttons to red */
@@ -37,19 +25,19 @@
         }
         .btn-danger {
             background-color: white !important; /* Change pinkish buttons to white */
-            color: black !important; /* Ensure text remains visible */
+            color: black !important;
             border-color: white !important;
         }
         .image-placeholder {
             width: 100%;
-            height: 150px; /* Set the height for the placeholder */
-            background-color: gray; /* Placeholder background color */
-            border: 2px dashed white; /* Dotted border to indicate image space */
+            height: 150px;
+            background-color: gray;
+            border: 2px dashed white;
             margin-bottom: 20px;
         }
-        /* Modal Styles */
+        /* Modal */
         .modal {
-            display: none; /* Hidden by default */
+            display: none;
             position: fixed;
             z-index: 1;
             padding-top: 100px;
@@ -58,7 +46,7 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+            background-color: rgba(0, 0, 0, 0.4);
         }
         .modal-content {
             background-color: #fefefe;
@@ -82,31 +70,34 @@
         }
     </style>
 </head>
-
 <body>
-    <div class="container my-4 text-center">
-        <!-- Image Placeholder -->
-        <div class="image-placeholder">
-            <p class="mt-4">Upload Your Logo Here</p>
+    <div class="container my-4">
+        <!-- Placeholder for Logo -->
+        <div class="image-placeholder text-center">
+            <p style="line-height: 150px;">Insert Your Logo Here</p>
         </div>
-        
-        <h1 class="font-weight-bold">Kryos OS</h1>
-        <p><strong>Unlocking Great Possibilities for Free</strong></p>
+
+        <h1 class="font-weight-bold text-center">Kryos OS</h1>
+        <p class="text-center"><strong>Unlocking Great Possibilities for Free</strong></p>
 
         <hr class="mt-5">
-        <p>Your future, powered by KryosOS. Completely free. Limitlessly yours.</p>
+        <p class="text-center">Your future, powered by KryosOS. Completely free. Limitlessly yours.</p>
 
         <!-- Buttons -->
-        <a class="btn btn-primary me-2" role="button" onclick="openWind();">Launch App</a>
-        <a class="btn btn-danger me-2" target="_blank" href="about.html" role="button">Learn More</a>
+        <div class="text-center">
+            <a class="btn btn-primary me-2" role="button" onclick="openWind();">Launch App</a>
+            <a class="btn btn-danger me-2" target="_blank" href="about.html" role="button">Learn More</a>
+        </div>
 
         <hr class="mb-5"/>
         <h5>Settings</h5>
         <p>Self Destruct (Close tab after launching app)</p>
         <input id="selfDestruct" type="checkbox" checked data-toggle="toggle">
-        
+
         <p>Activity Cloak (Opens a fake page to mimic normal activity)</p>
-        <input type="text" id="cloakurl" class="form-control" placeholder="Enter Activity Cloak URL">
+        <div class="input-group mb-3">
+            <input type="text" id="cloakurl" class="form-control" placeholder="Activity Cloak URL (e.g., https://classroom.google.com)">
+        </div>
         <input id="activityCloak" type="checkbox" data-toggle="toggle" checked>
 
         <p>Tab Cloak (Changes your tab name)</p>
